@@ -1,0 +1,35 @@
+{
+  "name": "hedgehog-in-the-fog-bot",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "git@github.com:azat-io/hedgehog-in-the-fog-bot.git",
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node -r \"node_modules/dotenv/config\" \"./index\"",
+    "lint": "eslint . --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@babel/core": "7.7.4",
+    "@babel/node": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "dotenv": "8.2.0",
+    "lodash": "4.17.15",
+    "socks5-https-client": "1.2.1",
+    "telegraf": "3.34.1"
+  },
+  "devDependencies": {
+    "eslint": "6.7.2",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "husky": "3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  }
+}
